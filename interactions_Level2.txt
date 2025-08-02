@@ -1,0 +1,13 @@
+You: what is 40 times 50
+Assistant (via calculator): 40 × 50 = 2000
+You: divide forty by two
+Assistant (via calculator): 40 ÷ 2 = 20.00
+You: multiply 45 with 12
+Assistant (via calculator): 45 × 12 = 540
+You: add forty-five and fifty
+Assistant (via calculator): 45 + 50 = 95
+You: capital of indonesia
+Assistant (via LLM): The capital of Indonesia is **Jakarta**.
+You: Multiply 6 and 8, and also tell me capital of Japan?
+Assistant: Sorry, I can only handle one task at a time.
+You: exit

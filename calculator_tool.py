@@ -1,4 +1,4 @@
-# calculator_tool.py
+
 
 import re
 
@@ -21,6 +21,15 @@ def word_to_number(word):
         return sum(number_map.get(p, 0) for p in parts)
     return None
 
+def is_number_word(token):
+    token = token.lower().strip()
+    if token in number_map:
+        return True
+    if '-' in token:
+        parts = token.split('-')
+        return all(p in number_map for p in parts)
+    return False
+
 def extract_numbers(text):
     words = text.lower().split()
     numbers = []
@@ -32,7 +41,7 @@ def extract_numbers(text):
     return numbers
 
 def calculate(prompt):
-    prompt = prompt.lower()
+    prompt = prompt.lower().replace(".", "")
     numbers = extract_numbers(prompt)
 
     if len(numbers) < 2:

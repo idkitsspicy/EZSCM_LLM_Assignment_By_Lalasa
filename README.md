@@ -102,6 +102,28 @@ python full_agent.py
 | `chatbot_with_tool.py` | Integration of LLM with calculator (Level 2)                   |
 | `.env`                 | Gemini API key                                                 |
 
+smart-assistant/
+│
+├── level1_llm_only/
+│   ├── chatbot.py
+│   └── interactions_Level1.txt
+│
+├── level2_llm_calculator/
+│   ├── chatbot_with_tool.py
+│   ├── calculator_tool.py
+│   └── interactions_Level2.txt
+│
+├── level3_agentic/
+│   ├── full_agent.py
+│   ├── calculator_tool.py  ← (shared, can import from level2)
+│   ├── translator_tool.py
+│   └── interactions_Level3.txt
+│
+├── .gitignore              ← contains `.env`
+├── .env                    ← (NOT pushed to GitHub)
+├── requirements.txt
+└── README.md
+
 ---
 
 ## 🔢 Example Calculator Inputs

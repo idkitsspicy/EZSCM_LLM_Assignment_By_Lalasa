@@ -1,0 +1,69 @@
+🤖 Agent is ready. Type 'exit' to quit.
+
+You: "Translate 'Good Morning' into German and then multiply 5 and 6."
+
+> translate 'good morning' into german
+(Translator) Guten Morgen
+
+> multiply 5 and 6
+(Calculator) 5 × 6 = 30
+
+You: "Add 10 and 20, then translate 'Have a nice day' into German."
+
+> add 10 and 20
+(Calculator) 10 + 20 = 30
+
+> translate 'have a nice day' into german
+(Translator) Einen schönen Tag noch
+
+You: "Tell me the capital of Italy, then multiply 12 and 12."
+
+> tell me the capital of italy
+(LLM) The capital of Italy is **Rome**.
+
+> multiply 12 and 12
+(Calculator) 12 × 12 = 144
+
+You: "Translate 'Sunshine' into German."
+
+> translate 'sunshine' into german
+(Translator) Sonnenschein
+
+You: "Add 2 and 2 and multiply 3 and 3."
+
+> add 2 and 2
+(Calculator) 2 + 2 = 4
+
+> multiply 3 and 3
+(Calculator) 3 × 3 = 9
+
+You: "What is the distance between Earth and Mars?"
+
+> what is the distance between earth mars
+(LLM) The distance between Earth and Mars is constantly changing due to their elliptical orbits around the Sun.  Therefore, there isn't a single, fixed distance. Here's a breakdown:
+
+*   **Closest Approach (Perihelion):** Around **54.6 million kilometers (33.9 million miles)**. This occurs when Earth is at its farthest point from the Sun (aphelion) and Mars is at its closest point to the Sun (perihelion), and they are lined up on the same side of the Sun.
+
+*   **Farthest Distance (Aphelion):** Around **401 million kilometers (249 million miles)**. This happens when both planets are on opposite sides of the Sun at their farthest points.
+
+*   **Average Distance:** About **225 million kilometers (140 million miles)**.
+
+**Key takeaway:** You'll often see the closest approach distance quoted because it's the most favorable time for sending spacecraft to Mars, requiring the least amount of travel time and fuel.
+
+
+You: Translate 'How are you?' into Spanish.
+
+> translate 'how are you?' into spanish
+(Translator) ¿Cómo estás?
+
+You: Tell me the capital of Japan then multiply 6 and 7.
+
+> tell me the capital of japan
+(LLM) The capital of Japan is **Tokyo**.
+
+> multiply 6 and 7
+(Calculator) 6 × 7 = 42
+
+You: exit
+
+👋 Agent shutting down.

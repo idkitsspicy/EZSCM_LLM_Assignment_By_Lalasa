@@ -106,16 +106,16 @@ python full_agent.py
 ```bash
 smart-assistant/
 │
-├── level1_llm_only/
+├── level1/
 │   ├── chatbot.py                   # Level 1 assistant (LLM-only)
 │   └── interactions_Level1.txt      # Sample prompts for Level 1
 │
-├── level2_llm_calculator/
+├── level2/
 │   ├── chatbot_with_tool.py         # Level 2 assistant (LLM + calculator)
 │   ├── calculator_tool.py           # Natural language arithmetic parser
 │   └── interactions_Level2.txt      # Sample prompts for Level 2
 │
-├── level3_agentic/
+├── level3/
 │   ├── full_agent.py                # Level 3 agent (tools + memory)
 │   ├── calculator_tool.py           # Shared calculator tool
 │   ├── translator_tool.py           # Translator tool for multilingual input
@@ -125,7 +125,7 @@ smart-assistant/
 ├── .env                             # Your API key (not pushed to GitHub)
 ├── requirements.txt                 # Python dependencies
 └── README.md                        # Project overview and instructions
-...
+```
 
 ---
 

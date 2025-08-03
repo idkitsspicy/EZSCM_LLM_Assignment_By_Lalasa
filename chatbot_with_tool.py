@@ -38,7 +38,7 @@ def chat():
             break
 
         if detect_math_task(user_input):
-            if "and also" in user_input or "," in user_input:
+            if "and also" in user_input or "," in user_input or "then" in user_input:
                 print("Assistant: Sorry, I can only handle one task at a time.")
             else:
                 result = calculate(user_input)

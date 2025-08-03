@@ -102,27 +102,30 @@ python full_agent.py
 | `chatbot_with_tool.py` | Integration of LLM with calculator (Level 2)                   |
 | `.env`                 | Gemini API key                                                 |
 
+## Folder Structure 
+```bash
 smart-assistant/
 │
 ├── level1_llm_only/
-│   ├── chatbot.py
-│   └── interactions_Level1.txt
+│   ├── chatbot.py                   # Level 1 assistant (LLM-only)
+│   └── interactions_Level1.txt      # Sample prompts for Level 1
 │
 ├── level2_llm_calculator/
-│   ├── chatbot_with_tool.py
-│   ├── calculator_tool.py
-│   └── interactions_Level2.txt
+│   ├── chatbot_with_tool.py         # Level 2 assistant (LLM + calculator)
+│   ├── calculator_tool.py           # Natural language arithmetic parser
+│   └── interactions_Level2.txt      # Sample prompts for Level 2
 │
 ├── level3_agentic/
-│   ├── full_agent.py
-│   ├── calculator_tool.py  ← (shared, can import from level2)
-│   ├── translator_tool.py
-│   └── interactions_Level3.txt
+│   ├── full_agent.py                # Level 3 agent (tools + memory)
+│   ├── calculator_tool.py           # Shared calculator tool
+│   ├── translator_tool.py           # Translator tool for multilingual input
+│   └── interactions_Level3.txt      # Sample prompts for Level 3
 │
-├── .gitignore              ← contains `.env`
-├── .env                    ← (NOT pushed to GitHub)
-├── requirements.txt
-└── README.md
+├── .gitignore                       # Contains `.env` exclusion
+├── .env                             # Your API key (not pushed to GitHub)
+├── requirements.txt                 # Python dependencies
+└── README.md                        # Project overview and instructions
+...
 
 ---
 

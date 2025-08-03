@@ -1,47 +1,131 @@
-# EzSCM
-Python Software Engineer Assignment: LLM + Agentic Thinking
-Level-1 : LLM-Only Smart Assistant
-This is a simple command-line chatbot built in Python that uses **Google Gemini 2.0 Flash API** to answer user questions in a structured, step-by-step format. The focus is on **prompt engineering** to ensure clarity, reasoning, and refusals for restricted tasks (like calculations).
+Here’s a complete and clean **`README.md`** for your multi-level Smart Assistant project. It covers:
+
+* Project overview
+* Level descriptions (Easy, Medium, Hard)
+* Setup instructions
+* How to run and test
+* Dependencies
+* Example inputs/outputs
+* Folder structure (optional section)
 
 ---
 
-##  Features
+### ✅ `README.md` for Smart Assistant Project
 
--  Uses `gemini-2.0-flash` from Google Generative AI
--  Step-by-step answers using prompt engineering
--  Refuses to perform math and redirects to calculator
--  Clean CLI interface
--  Logs interactions (included in `interactions_Level1.txt`)
+````markdown
+# 🧠 Smart Assistant Project
 
----
+A multi-level intelligent assistant powered by LLMs, tools, and reasoning capabilities. This assistant evolves across three levels:
 
-##  Requirements
-
-Install dependencies:
-Your `requirements.txt` should contain:
-python-dotenv
-google-generativeai
-
-1. Create a `.env` file in the root directory:
-GEMINI_API_KEY=your_gemini_api_key_here
-
-2. [Get your API key here](https://aistudio.google.com/app/apikey)
+- ✅ Level 1: LLM-only basic responses
+- ✅ Level 2: LLM + Calculator Tool integration
+- ✅ Level 3: Agentic AI with memory + tool usage + multi-step reasoning
 
 ---
 
-##  How to Run
+## 📁 Levels Overview
 
-python chatbot.py
+### 🔹 Level 1: Easy (LLM-Only)
+- Direct answers using LLM (Gemini or OpenAI)
+- No tools or memory
+- Example:  
+  **Input:** "What is the capital of France?"  
+  **Output:** "Paris"
 
+### 🔹 Level 2: Medium (LLM + Calculator Tool)
+- Arithmetic from natural language prompts
+- Uses `calculator_tool.py` for operations
+- Example:  
+  **Input:** "Add twenty-three and 9"  
+  **Output:** `23 + 9 = 32`
 
-Then type your questions, e.g.:
-
-- What are the colors in a rainbow?
-- Tell me why the sky is blue?
-- What is 15 + 23? (will be refused)
+### 🔹 Level 3: Hard (Agentic AI with Memory + Tools)
+- Multi-step reasoning
+- Memory and tools like calculator and translator
+- Agent breaks down and executes tasks with history tracking
+- Example:  
+  **Input:** "Translate twenty-three plus forty to German and calculate it"  
+  **Output:**  
+  1. Translation: `"dreiundzwanzig plus vierzig"`  
+  2. Calculation: `23 + 40 = 63`
 
 ---
 
-## 🔒 Note
+## ⚙️ How to Run the Project
 
-> Do not share your `.env` file or expose your API key in public repositories. Add `.env` to `.gitignore`.
+### 1. 🧩 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+````
+
+### 2. 🔑 Set up Environment Variables
+
+Create a `.env` file and add your API key:
+
+```bash
+GEMINI_API_KEY=your_api_key_here
+```
+
+### 3. ▶️ Run a Level
+
+#### Level 1 (LLM-only):
+
+```bash
+python level1_llm.py
+```
+
+#### Level 2 (LLM + Calculator Tool):
+
+```bash
+python level2_calculator.py
+```
+
+#### Level 3 (Agent with Tools + Memory):
+
+```bash
+python level3_agent.py
+```
+
+---
+
+## 🔧 Files & Modules
+
+| File                   | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| `calculator_tool.py`   | Natural language calculator (supports digits and word-numbers) |
+| `translator_tool.py`   | English to German translator (for Level 3)                     |
+| `full_agent.py`        | Core agent logic for Level 3                                   |
+| `level1_llm.py`        | LLM-only execution script                                      |
+| `level2_calculator.py` | Integration of LLM with calculator                             |
+| `level3_agent.py`      | Final agent with reasoning, memory, and tools                  |
+| `.env`                 | Your Gemini API key                                            |
+
+---
+
+## 🔢 Example Calculator Inputs
+
+
+"Add forty and 60"         → 40 + 60 = 100  
+"Multiply seven and nine"  → 7 × 9 = 63  
+"Divide 100 by five"       → 100 ÷ 5 = 20.00  
+"Subtract 10 from twenty"  → 20 - 10 = 10  
+
+
+---
+
+
+##  Notes
+
+* Tested with Python 3.8+
+* LLM used: Gemini or OpenAI GPT (via API)
+* For Level 3, ensure both calculator and translator tools are imported properly in `full_agent.py`.
+
+---
+
+
+##  Author
+
+Smart Assistant by \[Your Name Here]
+
+

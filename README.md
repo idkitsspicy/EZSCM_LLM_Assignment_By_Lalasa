@@ -48,14 +48,14 @@ A multi-level intelligent assistant powered by LLMs, tools, and reasoning capabi
   2. Calculation: `23 + 40 = 63`
 
 ---
+....
+### ⚙️ How to Run the Project
 
-## ⚙️ How to Run the Project
-
-### 1. 🧩 Install Dependencies
+ 1. 🧩 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
-````
+...
 
 ### 2. 🔑 Set up Environment Variables
 

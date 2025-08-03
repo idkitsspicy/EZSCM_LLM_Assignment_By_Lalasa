@@ -1,12 +1,4 @@
-Here’s a complete and clean **`README.md`** for your multi-level Smart Assistant project. It covers:
 
-* Project overview
-* Level descriptions (Easy, Medium, Hard)
-* Setup instructions
-* How to run and test
-* Dependencies
-* Example inputs/outputs
-* Folder structure (optional section)
 
 ---
 
@@ -31,18 +23,24 @@ A multi-level intelligent assistant powered by LLMs, tools, and reasoning capabi
 - Example:  
   **Input:** "What is the capital of France?"  
   **Output:** "Paris"
+  **Input:** "What is 42 times 2?"  
+  **Output:** "I'm just a language model. You might have to use a calculator for that problem." 
 
 ### 🔹 Level 2: Medium (LLM + Calculator Tool)
 - Arithmetic from natural language prompts
 - Uses `calculator_tool.py` for operations
+-Cannot handle multiple tasks and politely declines
 - Example:  
   **Input:** "Add twenty-three and 9"  
   **Output:** `23 + 9 = 32`
+  **Input:** "Add twenty-three and 9 then tell me capital of Japan"  
+  **Output:** "Assistant: Sorry, I can only handle one task at a time."
 
 ### 🔹 Level 3: Hard (Agentic AI with Memory + Tools)
 - Multi-step reasoning
 - Memory and tools like calculator and translator
 - Agent breaks down and executes tasks with history tracking
+-Handles multiple tasks
 - Example:  
   **Input:** "Translate twenty-three plus forty to German and calculate it"  
   **Output:**  
@@ -72,19 +70,19 @@ GEMINI_API_KEY=your_api_key_here
 #### Level 1 (LLM-only):
 
 ```bash
-python level1_llm.py
+python chatbot.py
 ```
 
 #### Level 2 (LLM + Calculator Tool):
 
 ```bash
-python level2_calculator.py
+python chatbot_with_tool.py
 ```
 
 #### Level 3 (Agent with Tools + Memory):
 
 ```bash
-python level3_agent.py
+python full_agent.py
 ```
 
 ---
@@ -94,12 +92,12 @@ python level3_agent.py
 | File                   | Description                                                    |
 | ---------------------- | -------------------------------------------------------------- |
 | `calculator_tool.py`   | Natural language calculator (supports digits and word-numbers) |
-| `translator_tool.py`   | English to German translator (for Level 3)                     |
+| `translator_tool.py`   | Language translator (for Level 3)                              |
 | `full_agent.py`        | Core agent logic for Level 3                                   |
-| `level1_llm.py`        | LLM-only execution script                                      |
-| `level2_calculator.py` | Integration of LLM with calculator                             |
-| `level3_agent.py`      | Final agent with reasoning, memory, and tools                  |
-| `.env`                 | Your Gemini API key                                            |
+| `chatbot.py`           | LLM-only execution script(Level 1)                             |
+| `chatbot_with_tool.py` | Integration of LLM with calculator(Level 2)                    |
+| `full_agent.py`        | Final agent with reasoning, memory, and tools(Level 3)         |
+| `.env`                 | Gemini API key                                                 |
 
 ---
 
@@ -118,7 +116,7 @@ python level3_agent.py
 ##  Notes
 
 * Tested with Python 3.8+
-* LLM used: Gemini or OpenAI GPT (via API)
+* LLM used: Gemini 2.0 Flash (via API)
 * For Level 3, ensure both calculator and translator tools are imported properly in `full_agent.py`.
 
 ---
@@ -126,6 +124,6 @@ python level3_agent.py
 
 ##  Author
 
-Smart Assistant by \[Your Name Here]
+Smart Assistant by Lalasa Vattipalli
 
 

@@ -58,12 +58,12 @@ def calculate(prompt):
         return f"{' × '.join(map(str, numbers))} = {result}"
 
     elif any(op in prompt for op in ["subtract", "minus", "-"]):
-      if "from" in prompt and len(numbers) >= 2:
-        # Handle: "Subtract 10 from 20" → 20 - 10
+      if "from" in prompt and len(numbers) >= 2:#to handle inputs like subtract 10 from 20: 20-10
+        
         result = numbers[1] - numbers[0]
         return f"{numbers[1]} - {numbers[0]} = {result}"
       else:
-        # Handle: "10 minus 5" or "subtract 10 and 5"
+        #usual subtraction
         result = numbers[0]
         for n in numbers[1:]:
             result -= n
@@ -79,3 +79,4 @@ def calculate(prompt):
             return "Error: Division by zero is not allowed."
 
     return "Sorry, I can only handle addition, subtraction, multiplication, and division for now."
+

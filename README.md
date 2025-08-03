@@ -127,9 +127,4 @@ python full_agent.py
 
 Smart Assistant by Lalasa Vattipalli
 
-```
 
----
-
-
-```

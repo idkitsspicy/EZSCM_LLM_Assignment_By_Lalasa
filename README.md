@@ -63,7 +63,7 @@ pip install -r requirements.txt
 
 ### 2. 🔑 Set up Environment Variables
 
-Create a `.env` file and add your API key:
+Create a `.env` file and add your own API key before running the files:
 
 ```bash
 GEMINI_API_KEY=your_api_key_here
@@ -102,6 +102,10 @@ python full_agent.py
 | `chatbot_with_tool.py` | Integration of LLM with calculator (Level 2)                   |
 | `.env`                 | Gemini API key                                                 |
 
+## Built-in modules to be installed(requirements.txt) :
+``` bash
+pip install python-dotenv google-generativeai
+```
 ## Folder Structure 
 ```bash
 smart-assistant/
